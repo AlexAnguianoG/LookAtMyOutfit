@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Look at my Outfit</title>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css"  href="css/style.css">
+
+</head>
+<body>
+
+  <!-- HAMBURGER -->
+
+  <header class="site-header">
+      <div class="site-branding">
+          <h1 class="site-title"><a href="index.html" rel="home"><img src="images/LatmyO.png" alt="Logo"></a></h1>
+      </div><!-- .site-branding -->
+
+      <div class="hamburger-menu">
+          <div class="menu-icon">
+              <img src="images/menu-icon.png" alt="menu icon">
+          </div><!-- .menu-icon -->
+
+          <div class="menu-close-icon">
+              <img src="images/x.png" alt="menu close icon">
+          </div><!-- .menu-close-icon -->
+      </div><!-- .hamburger-menu -->
+  </header><!-- .site-header -->
+
+  <nav class="site-navigation flex flex-column justify-content-between">
+    <div class="site-branding d-none d-lg-block ">
+        <h1 class="site-title"><a href="index.html" rel="home"><img src="images/LookatmyOutfit.png" alt="Logo"></a></h1>
+    </div><!-- .site-branding -->
+
+    <ul class="main-menu flex flex-column justify-content-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="request.html">Request an Outfit</a></li>
+        <li class="current-menu-item"><a href="wardrobe.html">Wardrobe</a></li>
+        <li><a href="favOutfits.html">Favorite Outfits</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+
+    <p class="text-center" style="font-size:13px;">Copyright &copy; Look at my Outfit <script>document.write(new Date().getFullYear());</script></p>
+
+    <div class="social-profiles">
+        <ul class="flex justify-content-start justify-content-lg-center align-items-center">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+    </div><!-- .social-profiles -->
+  </nav><!-- .site-navigation -->
+
+<!-- OUTFIT REQUEST -->
+
+  <div class="text-center d-none d-md-block">
+    <img style="width:500px;margin-top:50px;margin-bottom:50px;" src="images/RequestAnOutfitLarge.png">
+  </div>
+
+  <div class="text-center d-lg-none">
+    <img style="width:300px;margin-top:150px;margin-bottom:50px;" src="images/RequestAnOutfitLarge.png">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 offset-lg-1 col-lg-10">
+        <form action="requestoutfit2.php" method="POST">
+          <table>
+            <tr>
+              <td class="optionstitle">Username: </td>
+              <td>
+                <input class="textbox userbox" maxlength="20" type="text" name="user" required oninvalid="this.setCustomValidity('Enter Username Here')" oninput="this.setCustomValidity('')" >
+              </td>
+            </tr><td class="separation"></td>
+            <tr>
+              <td class="optionstitle">Outfit name: </td>
+              <td>
+                <input class="textbox outfitnamebox" maxlength="35" type="text" name="outfitname" required oninvalid="this.setCustomValidity('Enter Outfit Name Here')" oninput="this.setCustomValidity('')" >
+              </td>
+            </tr><td class="separation"></td>
+            <tr>
+              <td class="optionstitle">Season: </td>
+              <td>
+                <label class="options">Spring
+                  <input type="radio" name="season" value="spring" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Summer
+                  <input type="radio" name="season" value="summer" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Autumn
+                  <input type="radio" name="season" value="autumn" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Winter
+                  <input type="radio" name="season" value="winter" required>
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr><td class="separation"></td>
+            <tr>
+              <td class="optionstitle">Time: </td>
+              <td>
+                <label class="options">Night
+                  <input type="radio" name="time" value="night" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Day
+                  <input type="radio" name="time" value="day" required>
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr><td class="separation"></td>
+            <tr>
+              <td class="optionstitle">Outfir for: </td>
+              <td>
+                <label class="options">Sports
+                  <input type="radio" name="reason" value="sports" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Casual
+                  <input type="radio" name="reason" value="casual" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Formal
+                  <input type="radio" name="reason" value="formal" required>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="options">Semi-Formal
+                  <input type="radio" name="reason" value="semiformal" required>
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr><td class="separation"></td>
+            <tr>
+              <td class="optionstitle">Extra details: </td>
+              <td>
+                <textarea class="textbox commentbox " rows="4" placeholder="More details..." name="comments" maxlength="224" required oninvalid="this.setCustomValidity('Enter Extra Details Here')" oninput="this.setCustomValidity('')" ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td class="d-none d-md-block"></td><td><input type="submit" value="Send Request"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
