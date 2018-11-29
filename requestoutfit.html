@@ -129,6 +129,10 @@
                   <input type="radio" name="time" value="day" onclick="changeColortoDay();" required> <!-- Day time option -->
                   <span class="checkmark"></span>
                 </label>
+                <label class="options">All day
+                  <input type="radio" name="time" value="allday" onclick="changeColortoNormal();" required> <!-- Night time option -->
+                  <span class="checkmark"></span>
+                </label>
               </td>
             </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
@@ -177,12 +181,17 @@
 
   function changeColortoNight() {
     document.body.style.backgroundColor= 'rgba(' + 13 + ',' + 17 + ',' + 59 + ',' + 0.86 + ')'; // Changes background color if night time is selected
-    document.body.style.color="#E27C7C"; // Changes texts color
+    document.body.style.color="#ffffff"; // Changes texts color
   }
 
   function changeColortoDay() {
   	document.body.style.backgroundColor="#d1e4ed"; // Changes background color if day time is selected
     document.body.style.color="#E27C7C"; // Changes texts color
+  }
+
+  function changeColortoNormal() {
+  	document.body.style.backgroundColor="#ffffff"; // Changes background color if day time is selected
+    document.body.style.color="#3b3939"; // Changes texts color
   }
 </script>
 
