@@ -2,7 +2,7 @@
 (function($) {
     'use strict';
 
-    // Main Navigation
+    // HAMBURGER / NAVIGATION MENU
     $( '.hamburger-menu' ).on( 'click', function() {
         $(this).toggleClass('close');
         $('.site-branding').toggleClass('hide');

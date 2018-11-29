@@ -14,154 +14,178 @@
   <!-- FontAwesome CSS -->
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-  <!-- Stylesheet -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css"  href="css/style.css">
 
 </head>
 <body>
 
-  <!-- HAMBURGER -->
+  <!-- HAMBURGER/NAVIGATION BAR -->
 
   <header class="site-header">
       <div class="site-branding">
-          <h1 class="site-title"><a href="index.html" rel="home"><img src="images/LatmyO.png" alt="Logo"></a></h1>
-      </div><!-- .site-branding -->
+          <h1 class="site-title"><a href="#"><img src="images/LatmyO.png" alt="Logo"></a></h1> <!-- Menu logo icon -->
+      </div>
 
       <div class="hamburger-menu">
           <div class="menu-icon">
-              <img src="images/menu-icon.png" alt="menu icon">
-          </div><!-- .menu-icon -->
+              <img src="images/menu-icon.png" alt="menu icon"> <!-- Menu open icon -->
+          </div>
 
           <div class="menu-close-icon">
-              <img src="images/x.png" alt="menu close icon">
-          </div><!-- .menu-close-icon -->
-      </div><!-- .hamburger-menu -->
-  </header><!-- .site-header -->
+              <img src="images/x.png" alt="menu close icon"> <!-- Menu close icon -->
+          </div>
+      </div>
+  </header>
 
   <nav class="site-navigation flex flex-column justify-content-between">
-    <div class="site-branding d-none d-lg-block ">
+    <div class="site-branding d-none d-lg-block "> <!-- Inside menu logo icon only visible on desktop screens -->
         <h1 class="site-title"><a href="index.html" rel="home"><img src="images/LookatmyOutfit.png" alt="Logo"></a></h1>
-    </div><!-- .site-branding -->
-
-    <ul class="main-menu flex flex-column justify-content-center">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="request.html">Request an Outfit</a></li>
-        <li class="current-menu-item"><a href="wardrobe.html">Wardrobe</a></li>
-        <li><a href="favOutfits.html">Favorite Outfits</a></li>
-        <li><a href="account.html">Account</a></li>
+    </div>
+    <div class="text-center d-lg-none">
+      <br>
+    </div>
+    <ul class="main-menu flex flex-column justify-content-center"> <!-- Navigation menu -->
+        <li><a href="#">Home</a></li> <!-- Link to home page -->
+        <li class="current-menu-item"><a href="requestoutfit.html">Request an Outfit</a></li> <!-- Link to outfit requesting section -->
+        <li><a href="#">Wardrobe</a></li> <!-- Link to user wardrobe section-->
+        <li><a href="#">Favorite Outfits</a></li> <!-- Link to user favorite outfits section -->
+        <li><a href="#">Account</a></li> <!-- Link to user account section -->
     </ul>
-
-    <p class="text-center" style="font-size:13px;">Copyright &copy; Look at my Outfit <script>document.write(new Date().getFullYear());</script></p>
+    <div class="text-center d-lg-none">
+      <br>
+    </div>
+    <p class="text-center" style="font-size:13px;">Copyright &copy; Look at my Outfit <script>document.write(new Date().getFullYear());</script></p> <!-- Copyright line -->
 
     <div class="social-profiles">
-        <ul class="flex justify-content-start justify-content-lg-center align-items-center">
+        <ul class="flex justify-content-start justify-content-lg-center align-items-center"> <!-- Social profiles of Look at my Outfit -->
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
         </ul>
-    </div><!-- .social-profiles -->
-  </nav><!-- .site-navigation -->
+    </div>
+  </nav>
 
 <!-- OUTFIT REQUEST -->
 
-  <div class="text-center d-none d-md-block">
+  <div class="text-center d-none d-lg-block"> <!-- Logo for desktop -->
     <img style="width:500px;margin-top:50px;margin-bottom:50px;" src="images/RequestAnOutfitLarge.png">
   </div>
 
-  <div class="text-center d-lg-none">
+  <div class="text-center d-none d-md-block d-lg-none"> <!-- Logo for tablets -->
+    <img style="width:500px;margin-top:120px;margin-bottom:50px;" src="images/RequestAnOutfitLarge.png">
+  </div>
+
+  <div class="text-center d-md-none"> <!-- Logo for small devices -->
     <img style="width:300px;margin-top:150px;margin-bottom:50px;" src="images/RequestAnOutfitLarge.png">
   </div>
 
   <div class="container">
     <div class="row">
       <div class="col-12 offset-lg-1 col-lg-10">
-        <form action="requestoutfit2.php" method="POST">
+        <form action="requestoutfit.php" method="POST"> <!-- Form request with php linking -->
           <table>
             <tr>
-              <td class="optionstitle">Username: </td>
+              <td class="optionstitle">Username: </td> <!-- Username filling -->
               <td>
-                <input class="textbox userbox" maxlength="20" type="text" name="user" required oninvalid="this.setCustomValidity('Enter Username Here')" oninput="this.setCustomValidity('')" >
+                <input class="textbox userbox" maxlength="20" type="text" name="user" required oninvalid="this.setCustomValidity('Enter Username Here')" oninput="this.setCustomValidity('')" > <!-- Username input -->
               </td>
-            </tr><td class="separation"></td>
+            </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
-              <td class="optionstitle">Outfit name: </td>
+              <td class="optionstitle">Outfit name: </td> <!-- Outfit name filling -->
               <td>
-                <input class="textbox outfitnamebox" maxlength="35" type="text" name="outfitname" required oninvalid="this.setCustomValidity('Enter Outfit Name Here')" oninput="this.setCustomValidity('')" >
+                <input class="textbox outfitnamebox" maxlength="35" type="text" name="outfitname" required oninvalid="this.setCustomValidity('Enter Outfit Name Here')" oninput="this.setCustomValidity('')" > <!-- Outfit name input -->
               </td>
-            </tr><td class="separation"></td>
+            </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
-              <td class="optionstitle">Season: </td>
+              <td class="optionstitle">Season: </td> <!-- Outfit season filling -->
               <td>
                 <label class="options">Spring
-                  <input type="radio" name="season" value="spring" required>
+                  <input type="radio" name="season" value="spring" required> <!-- Spring season option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Summer
-                  <input type="radio" name="season" value="summer" required>
+                  <input type="radio" name="season" value="summer" required> <!-- Summer season option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Autumn
-                  <input type="radio" name="season" value="autumn" required>
+                  <input type="radio" name="season" value="autumn" required> <!-- Autumn season option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Winter
-                  <input type="radio" name="season" value="winter" required>
+                  <input type="radio" name="season" value="winter" required> <!-- Winter season option -->
                   <span class="checkmark"></span>
                 </label>
               </td>
-            </tr><td class="separation"></td>
+            </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
-              <td class="optionstitle">Time: </td>
+              <td class="optionstitle">Time: </td> <!-- Outfit time filling -->
               <td>
                 <label class="options">Night
-                  <input type="radio" name="time" value="night" required>
+                  <input type="radio" name="time" value="night" onclick="changeColortoNight();" required> <!-- Night time option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Day
-                  <input type="radio" name="time" value="day" required>
+                  <input type="radio" name="time" value="day" onclick="changeColortoDay();" required> <!-- Day time option -->
                   <span class="checkmark"></span>
                 </label>
               </td>
-            </tr><td class="separation"></td>
+            </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
-              <td class="optionstitle">Outfir for: </td>
+              <td class="optionstitle">Outfir for: </td> <!-- Outfit reason filling -->
               <td>
                 <label class="options">Sports
-                  <input type="radio" name="reason" value="sports" required>
+                  <input type="radio" name="reason" value="sports" required> <!-- Sports reason option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Casual
-                  <input type="radio" name="reason" value="casual" required>
+                  <input type="radio" name="reason" value="casual" required> <!-- Casual reason option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Formal
-                  <input type="radio" name="reason" value="formal" required>
+                  <input type="radio" name="reason" value="formal" required> <!-- Formal reason option -->
                   <span class="checkmark"></span>
                 </label>
                 <label class="options">Semi-Formal
-                  <input type="radio" name="reason" value="semiformal" required>
+                  <input type="radio" name="reason" value="semiformal" required> <!-- Semi-Formal reason option -->
                   <span class="checkmark"></span>
                 </label>
               </td>
-            </tr><td class="separation"></td>
+            </tr><td class="separation"></td> <!-- Visible separation between the option filling -->
             <tr>
-              <td class="optionstitle">Extra details: </td>
+              <td class="optionstitle">Extra details: </td> <!-- Outfit extra details filling -->
               <td>
-                <textarea class="textbox commentbox " rows="4" placeholder="More details..." name="comments" maxlength="224" required oninvalid="this.setCustomValidity('Enter Extra Details Here')" oninput="this.setCustomValidity('')" ></textarea>
+                <textarea class="textbox commentbox " rows="4" placeholder="More details..." name="comments" maxlength="224" required oninvalid="this.setCustomValidity('Enter Extra Details Here')" oninput="this.setCustomValidity('')" ></textarea> <!-- Text area filling for extra details -->
               </td>
             </tr>
             <tr>
-              <td class="d-none d-md-block"></td><td><input type="submit" value="Send Request"></td>
+              <td class="d-none d-md-block"></td><td><input type="submit" value="Send Request"></td> <!-- Send request button -->
             </tr>
           </table>
         </form>
+
       </div>
     </div>
   </div>
 
 
+<!-- Scripts -->
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/custom.js'></script>
+
+<script>
+
+  function changeColortoNight() {
+    document.body.style.backgroundColor= 'rgba(' + 13 + ',' + 17 + ',' + 59 + ',' + 0.86 + ')'; // Changes background color if night time is selected
+    document.body.style.color="#E27C7C"; // Changes texts color
+  }
+
+  function changeColortoDay() {
+  	document.body.style.backgroundColor="#d1e4ed"; // Changes background color if day time is selected
+    document.body.style.color="#E27C7C"; // Changes texts color
+  }
+</script>
+
 
 </body>
 </html>

@@ -1,15 +1,18 @@
 <?php
+//Received values definition
 $user = $_POST['user'];
 $outfitname = $_POST['outfitname'];
 $season = $_POST['season'];
 $time = $_POST['time'];
 $reason = $_POST['reason'];
 $comments = $_POST['comments'];
-if (!empty($user) || !empty($outfitname) || !empty($season) || !empty($time) || !empty($reason) || !empty($comments)) {
-    $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $dbname = "latmyodb";
+// Databse settings
+$host = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbname = "latmyodb";
+//Connection to databse
+$conn = new mysqli ($host, $dbUsername, $dbPassword, $dbname);
 
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
@@ -43,3 +46,5 @@ if (!empty($user) || !empty($outfitname) || !empty($season) || !empty($time) || 
      die();
     }
     ?>
+}
+?>
